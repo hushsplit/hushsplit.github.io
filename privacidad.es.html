@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · HushSplit</title>
+<style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0 auto; padding: 32px 20px 64px; max-width: 42rem;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1a1a; background: #fbfaf8;
+    }
+    h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.05rem; margin: 34px 0 8px; letter-spacing: .01em; }
+    p, li { margin: 8px 0; }
+    ul, ol { padding-left: 22px; }
+    a { color: #1f6f5c; }
+    .fecha { color: #6b6b6b; font-size: .85rem; margin: 0 0 8px; }
+    .idiomas { font-size: .85rem; margin: 0 0 28px; color: #6b6b6b; }
+    .idiomas a { margin-right: 10px; }
+    .destacado {
+      border: 1px solid #d9d5cd; border-radius: 10px; padding: 14px 18px;
+      background: #fff; margin: 18px 0;
+    }
+    footer { margin-top: 44px; font-size: .85rem; color: #6b6b6b; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #ececec; background: #131313; }
+      a { color: #6fd3b6; }
+      .destacado { background: #1c1c1c; border-color: #333; }
+      .fecha, .idiomas, footer { color: #9a9a9a; }
+    }
+</style>
+</head>
+<body>
+<p class="idiomas"><a href="privacidad.en.html">English</a> <a href="privacidad.pt.html">Português</a></p>
+<h1>Política de privacidad</h1>
+<p class="fecha">HushSplit · actualizada el 29 de septiembre de 2026</p>
+
+<h2>Lo corto</h2>
+<p>
+  HushSplit funciona <strong>en tu teléfono</strong>. Tus gastos, tus grupos y tus contactos no están
+  en ninguna base de datos nuestra: viajan <strong>cifrados de punta a punta</strong> entre los
+  teléfonos de tu grupo, a través de un buzón que no los puede abrir.
+</p>
+<p>
+  Del lado del servidor guardamos sólo lo necesario para que el buzón reconozca tu cuenta: si entrás
+  con Google o Apple, <strong>tu mail y tu identificador de cuenta</strong>. Si entrás como invitado,
+  ni eso.
+</p>
+
+<h2>Qué datos existen, y dónde</h2>
+<p><strong>En tu teléfono:</strong> tus gastos, grupos, pagos y movimientos personales; tu nombre,
+tu foto y tus preferencias; las claves criptográficas de tus grupos y la identidad de tu
+dispositivo. Si desinstalás la app sin exportar un respaldo, se pierde: no hay ninguna copia
+nuestra desde la cual restaurarlo. El archivo de respaldo incluye, sin cifrar, tus datos y las
+claves de tus grupos: guardalo como algo privado.</p>
+<p><strong>En los teléfonos de la gente de tus grupos:</strong> cuando compartís un grupo, sus
+gastos —y tu nombre y tu foto— quedan guardados en el teléfono de cada integrante. Una vez que un
+dato llegó ahí, ni vos ni nosotros lo podemos borrar.</p>
+<p><strong>En el buzón de sincronización</strong> (alojado en Supabase), de cada paquete se guarda:
+una etiqueta derivada de la clave del grupo, el contenido <strong>cifrado</strong>, un
+identificador del dispositivo que lo mandó, una marca que le permite a ese dispositivo borrarlo
+después, y las fechas de llegada y de vencimiento. Los paquetes se borran solos a los
+<strong>30 días</strong>. Quien tiene o tuvo la clave de un grupo puede leer sus paquetes; alguien
+de afuera no, porque sin la clave la etiqueta no se adivina ni el contenido se descifra.</p>
+<p><strong>Tu cuenta en el buzón:</strong></p>
+<ul>
+  <li>Si entrás con <strong>Google o Apple</strong>: tu mail, tu identificador en ese proveedor y lo
+      que el proveedor incluye al iniciar sesión (con Google, tu nombre y la dirección de tu foto).</li>
+  <li>Si entrás como <strong>invitado</strong>: una cuenta anónima, sin mail ni nombre.</li>
+  <li>En los dos casos, la <strong>clave pública</strong> de tu dispositivo, para que tus grupos
+      puedan verificar que lo que escribís es tuyo, y <strong>contadores de uso</strong> (cuántos
+      paquetes y bytes mandás) para frenar abusos. Los contadores se borran solos en un día como
+      máximo.</li>
+</ul>
+<p>Esos datos se usan <strong>sólo para que la sincronización funcione</strong>. No te mandamos
+mails, no los usamos para publicidad y no los compartimos con nadie.</p>
+
+<h2>Servicios de terceros</h2>
+<ul>
+  <li><strong>Supabase</strong> aloja el buzón y las cuentas del buzón.</li>
+  <li><strong>Google y Apple</strong>, si iniciás sesión con ellos. Con Google, la app descarga una
+      vez tu foto de perfil desde los servidores de Google.</li>
+  <li><strong>Cloudflare Turnstile</strong>, si entrás como invitado: una verificación contra bots.
+      Cloudflare ve tu dirección IP y datos técnicos del navegador interno de la app.</li>
+  <li><strong>Cotizaciones de monedas</strong>: si tenés gastos en más de una moneda, la app pide la
+      tabla del día a un servicio público (open.er-api.com). No manda ningún dato tuyo; como
+      cualquier pedido a internet, ese servicio ve tu IP. Con una sola moneda, no se hace nunca.</li>
+</ul>
+
+<h2>Permisos</h2>
+<ul>
+  <li><strong>Cámara:</strong> escanear el QR de un contacto y sacarle la foto a un recibo.</li>
+  <li><strong>Fotos:</strong> elegir tu foto de perfil, con el selector del sistema. En Android no
+      pide permiso de galería.</li>
+  <li><strong>Notificaciones:</strong> avisarte de gastos nuevos, comentarios, pagos, restauraciones
+      e invitaciones. Se generan en tu teléfono, no las manda un servidor.</li>
+  <li><strong>Internet:</strong> dejar y buscar paquetes en el buzón.</li>
+</ul>
+<p>La app <strong>no pide micrófono, no pide Bluetooth y no pide ubicación</strong>.</p>
+
+<h2>Lo que no hacemos</h2>
+<p>
+  No hay publicidad ni identificadores de publicidad. No hay analítica: no medimos qué pantallas ves
+  ni cuánto usás la app. No vendemos ni compartimos datos con nadie. No hay rastreo entre apps.
+</p>
+
+<h2>Borrar tu cuenta</h2>
+<p>
+  Desde <strong>Yo → Borrar cuenta</strong> se borra de tu teléfono todo lo de esa cuenta; del
+  buzón, los paquetes que dejó ese teléfono; y <strong>tu cuenta del buzón</strong>: mail,
+  identificador, clave pública y contadores. Si no hay internet en ese momento, lo del servidor se
+  completa la próxima vez que abras la app con conexión. Si ya no tenés la app, escribinos desde el
+  mail de tu cuenta y la borramos. Los detalles, y lo que no se puede borrar, están en la
+  <a href="borrar-cuenta.es.html">página de borrado de cuenta</a>.
+</p>
+
+<h2>Preguntas</h2>
+<p><a href="mailto:gab.maglia@gmail.com">gab.maglia@gmail.com</a></p>
+<footer>HushSplit · <a href="mailto:gab.maglia@gmail.com">gab.maglia@gmail.com</a></footer>
+</body>
+</html>
